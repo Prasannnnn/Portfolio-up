@@ -22,6 +22,7 @@ header {
     border-bottom: #ff9800 3px solid;
     position: fixed;
     width: 100%;
+    top: 0;
     z-index: 1000;
 }
 
@@ -67,7 +68,7 @@ header a:hover {
 }
 
 /* Showcase Styles */
-#showcase {
+.showcase {
     min-height: 400px;
     background: #333;
     text-align: center;
@@ -75,12 +76,12 @@ header a:hover {
     padding-top: 100px;
 }
 
-#showcase h1 {
+.showcase h1 {
     font-size: 55px;
     margin-bottom: 10px;
 }
 
-#showcase p {
+.showcase p {
     font-size: 20px;
 }
 
