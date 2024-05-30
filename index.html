@@ -14,12 +14,12 @@
             </div>
             <nav>
                 <ul>
-                    <li class="current"><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li class="current"><a href="#home" data-scroll>Home</a></li>
+                    <li><a href="#about" data-scroll>About</a></li>
+                    <li><a href="#skills" data-scroll>Skills</a></li>
+                    <li><a href="#projects" data-scroll>Projects</a></li>
+                    <li><a href="#experience" data-scroll>Experience</a></li>
+                    <li><a href="#contact" data-scroll>Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -102,12 +102,30 @@
     <section id="contact" class="container">
         <h2>Contact</h2>
         <p><strong>Email:</strong> <a href="mailto:prasannamb4362@gmail.com">prasannamb4362@gmail.com</a></p>
-        <p><strong>LinkedIn:</strong> <a href="http://www.linkedin.com/in/prasanna-balaji1972">Prasanna B</a></p>
-        <p><strong>GitHub:</strong> <a href="https://github.com/Prasannnnn">Prasanna B</a></p>
+        <p><strong>LinkedIn:</strong> <a href="http://www.linkedin.com/in/prasanna-balaji1972">Prasanna Balaji</a></p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/Prasannnnn">Prasannnnn</a></p>
     </section>
 
     <footer>
         <p>Prasanna.B &copy; 2024</p>
     </footer>
+
+    <script>
+        // Smooth scrolling with offset for fixed header
+        document.querySelectorAll('a[data-scroll]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                const offsetPosition = targetElement.offsetTop - document.querySelector('header').offsetHeight;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
